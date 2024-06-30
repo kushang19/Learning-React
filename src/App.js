@@ -1,16 +1,16 @@
 import React from "react";
-import Navbar from "./components/Navbar";
-import Shop from "./components/Shop";
+import UseRef from "./Topics/UseRef";
+import Redux from "./Topics/Redux";
+import UseMemo from "./Topics/UseMemo";
 
-function App() {
+function AppRedux() {
   return (
       <>
-      <Navbar/>
-      <div className="container">
-        <Shop />
-      </div>
+        {/* <Redux /> */}
+        {/* <UseRef /> */}
+        {/* <UseMemo /> */}
       </>
   );
 }
 
-export default App;
+export default AppRedux;
