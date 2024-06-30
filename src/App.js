@@ -3,14 +3,14 @@ import UseRef from "./Topics/UseRef";
 import Redux from "./Topics/Redux";
 import UseMemo from "./Topics/UseMemo";
 
-function AppRedux() {
+function App() {
   return (
       <>
         {/* <Redux /> */}
         {/* <UseRef /> */}
-        {/* <UseMemo /> */}
+        <UseMemo />
       </>
   );
 }
 
-export default AppRedux;
+export default App;
