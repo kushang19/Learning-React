@@ -4,6 +4,7 @@ import Redux from "./Topics/Redux";
 import UseMemo from "./Topics/UseMemo";
 import FirstComponent from "./components/FirstComponent";
 import SecondComponent from "./components/SecondComponent";
+import Axios from "./Topics/Axios";
 
 function App() {
   return (
@@ -11,8 +12,9 @@ function App() {
         {/* <Redux /> */}
         {/* <UseRef /> */}
         {/* <UseMemo /> */}
-        <FirstComponent />
-        <SecondComponent />
+        {/* <FirstComponent /> */}
+        {/* <SecondComponent /> */}
+        <Axios/>
       </>
   );
 }
