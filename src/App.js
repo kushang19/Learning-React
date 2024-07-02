@@ -1,20 +1,23 @@
 import React from "react";
-import UseRef from "./Topics/UseRef";
-import Redux from "./Topics/Redux";
-import UseMemo from "./Topics/UseMemo";
-import FirstComponent from "./components/FirstComponent";
-import SecondComponent from "./components/SecondComponent";
-import Axios from "./Topics/Axios";
+// import Redux from "./Topics/Redux";
+// import UseRef from "./Topics/UseRef";
+// import UseMemo from "./Topics/UseMemo";
+// import FirstComponent from "./components/FirstComponent";
+// import SecondComponent from "./components/SecondComponent";
+// import Axios from "./Topics/Axios";
+import ListItems from "./Topics/ListItems";
+
 
 function App() {
   return (
       <>
+        <ListItems />
         {/* <Redux /> */}
         {/* <UseRef /> */}
         {/* <UseMemo /> */}
         {/* <FirstComponent /> */}
         {/* <SecondComponent /> */}
-        <Axios/>
+        {/* <Axios/> */}
       </>
   );
 }
