@@ -2,6 +2,8 @@
   text-align: center;
 }
 
+.main-wrapper{max-width: 500px;}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -26,6 +28,10 @@
 
 .App-link {
   color: #61dafb;
+}
+
+a{
+  color: red;
 }
 
 @keyframes App-logo-spin {
