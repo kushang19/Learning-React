@@ -6,25 +6,25 @@ const UseEffect = () => {
     const [user, setUser] = useState("");
     const [display, setDisplay] = useState(false)
 
+    const  fetchData = async () => {
+      try{
+          const response = await fetch(`https://jsonplaceholder.typicode.com/todos/${num}`);
+
+          if(!response.ok){
+            throw new Error("Response Error" + response.statusText);
+          }
+          
+          const data = await response.json();
+          setUser(data);
+          console.log(data)
+
+      } catch(error){
+              console.log(error);
+      }
+    }
+
     useEffect(() =>{
         if(num){
-
-          const  fetchData = async () => {
-            try{
-                const response = await fetch(`https://jsonplaceholder.typicode.com/todos/${num}`);
-
-                if(!response.ok){
-                  throw new Error("Response Error" + response.statusText);
-                }
-                
-                const data = await response.json();
-                setUser(data);
-                console.log(data)
-
-            } catch(error){
-                    console.log(error);
-            }
-          }
           fetchData();
         }
     }, [num])

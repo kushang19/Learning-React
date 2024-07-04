@@ -1,12 +1,13 @@
 import React from "react";
-import UseEffect from "./Topics/UseEffect";
+// import ListItems from "./Topics/ListItems";
 // import Redux from "./Topics/Redux";
 // import UseRef from "./Topics/UseRef";
 // import UseMemo from "./Topics/UseMemo";
 // import FirstComponent from "./components/FirstComponent";
 // import SecondComponent from "./components/SecondComponent";
 // import Axios from "./Topics/Axios";
-// import ListItems from "./Topics/ListItems";
+import UseEffect from "./Topics/UseEffect";
+// import ChildToParent from "./Topics/ChildToParent";
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         {/* <SecondComponent /> */}
         {/* <Axios/> */}
         <UseEffect/>
+        {/* <ChildToParent /> */}
       </>
   );
 }
