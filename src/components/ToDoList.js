@@ -18,14 +18,23 @@ Utilize the local Storage API to store and retrieve newTask.
 
 */
 
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 
 const ToDotasks = () => {
-
+    
+    // Retrieve the list from local storage when the component mounts
+    const storedList = JSON.parse(localStorage.getItem("myList") || '[]');
+    
     const [text, setText] = useState("")
-    const [list, setList] = useState([])
+    const [list, setList] = useState(storedList)
     const [isEditing, setIsEditing] = useState(false)
     const [updatedText, setUpdatedText] = useState({})
+    const [completedTasks, setCompletedTasks] = useState(true);
+    
+    useEffect(() => {
+        // Store the list in local storage whenever it changes
+        localStorage.setItem("myList", JSON.stringify(list));
+      }, [list]);
 
     const handleAddTask = () =>{
         if(text.trim() !== ""){
@@ -52,6 +61,20 @@ const ToDotasks = () => {
 
     }
     const handleDelete = id => setList(list.filter(item => item.id !== id)); 
+
+    const handleCheck = (index) => {
+        let title = document.getElementById(`title${index}`)
+        let btn = document.getElementById(`btn${index}`)
+        if(completedTasks){
+            title.style.textDecoration = "line-through";
+            btn.textContent = "Uncheck"
+            setCompletedTasks(false)
+        }else{
+            title.style.textDecoration = "none";
+            btn.textContent = "Check"
+            setCompletedTasks(true)
+        }
+    }
     
   return (
     <>
@@ -66,11 +89,12 @@ const ToDotasks = () => {
   
         <h1>To Do tasks</h1>
         <ul style={{listStyle: 'none', padding: '0'}}>
-        {list.map((item) => (
+        {list.map((item,index) => (
           <li className="my-3" key={item.id}>
-           <h4>{item.textLi}</h4>
+           <h4 id={`title${index}`}>{index+1}. {item.textLi}</h4>
             <button className="btn btn-primary my-2 mx-1" onClick={() => handleEdit(item)} >Edit</button>
             <button className="btn btn-primary my-2 mx-1"onClick={() => handleDelete(item.id)} >Delete</button>
+            <button id={`btn${index}`} className="btn btn-primary my-2 mx-1"onClick={() => handleCheck(index)} >Check</button>
           </li>
         ))}
         </ul>

@@ -63,8 +63,7 @@ class Axios extends React.Component {
 
 // Below is an example to fetch the customer’s data using Axios…
 const getCustomersData = () => {
-    axios
-        .get("https://jsonplaceholder.typicode.com/customers")
+    axios.get("https://jsonplaceholder.typicode.com/customers")
         .then(data => console.log(data.data))
         .catch(error => console.log(error));
 };
