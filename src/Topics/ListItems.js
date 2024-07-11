@@ -10,8 +10,10 @@ const ListItems = () => {
 
     }
     const btnHandler = () => {
-        setList([...list, text]);
-        setText("")
+        if(text.trim() !== ""){
+          setList([...list, text]);
+          setText("")
+        }
     }
 
   return (

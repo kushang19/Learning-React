@@ -1,4 +1,4 @@
-import React from "react";
+import React,{lazy, Suspense} from "react";
 import Home from "./components/Home";
 import ListItems from "./Topics/ListItems";
 import Redux from "./Topics/Redux";
@@ -13,6 +13,7 @@ import CustomComponent from "./components/CustomComponent";
 import {BrowserRouter as Router,Routes,Route} from "react-router-dom"; 
 import MainNav from "./components/MainNav";
 import ToDoList from "./components/ToDoList";
+
 
 
 function App() {
@@ -34,7 +35,6 @@ function App() {
             <Route exact path="/user-registration-form" element={<UserRegistrationForm />} />
             <Route exact path="/custom-component" element={<CustomComponent />} />
             <Route exact path="/to-do-list" element={<ToDoList/>} />
-            
           </Routes>
           </div>
         </Router>

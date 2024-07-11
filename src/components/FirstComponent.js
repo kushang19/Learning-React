@@ -1,7 +1,7 @@
-import useCustomHook from "../Topics/useCustomHook";
+import UseCustomHook from "../Topics/UseCustomHook";
 
 const FirstComponent = () => {
-    const clickedButton = useCustomHook(0 , "FirstComponent"); 
+    const clickedButton = UseCustomHook(0 , "FirstComponent"); 
   return (
     <div>
         <h1> This is the First Component</h1>

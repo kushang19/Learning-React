@@ -1,4 +1,7 @@
-import React,{useRef} from 'react'
+import React,{useRef,lazy,Suspense} from 'react'
+import PureComponentExample from './PureComponentExample'
+
+const LazyLoad = lazy(() => import ('./LazyLoad'))
 
 const UseRef = () => {
 
@@ -16,11 +19,17 @@ const focusHandler = () =>{
 }
 
   return (
-    <div>
+    <>
       <input type="text" ref={inputRef} placeholder="Click the button to focus" />
       <button  onClick={focusHandler} >click to focus input </button>
       <textarea ref={focusPoint} /> 
-    </div>
+
+      <Suspense fallback={<div>please wait...</div>}>
+      <LazyLoad/>
+      </Suspense>
+
+      <PureComponentExample />
+    </>
   )
 }
 

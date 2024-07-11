@@ -1,6 +1,6 @@
 import React,{useState, useEffect} from 'react'
 
-const useCustomHook = (initalizer, componentName) => {
+const UseCustomHook = (initalizer, componentName) => {
     const [counter, setCounter] = useState(initalizer);
 
     function resetCounter(){
@@ -14,7 +14,7 @@ const useCustomHook = (initalizer, componentName) => {
   return resetCounter;
 }
 
-export default useCustomHook
+export default UseCustomHook
 
 /*
 Rules to Build React Custom Hooks
