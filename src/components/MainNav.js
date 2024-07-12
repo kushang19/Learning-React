@@ -42,6 +42,9 @@ const MainNav = () => {
         <li className="nav-item">
           <Link className="nav-link" to="/custom-component">Custom Component</Link>
         </li>
+        <li className="nav-item">
+          <Link className="nav-link" to="/fetch-data">Fetch Data</Link>
+        </li>
       </ul>
 
     </div>

@@ -14,6 +14,8 @@ import {BrowserRouter as Router,Routes,Route} from "react-router-dom";
 import MainNav from "./components/MainNav";
 import ToDoList from "./components/ToDoList";
 
+import FetchData from "./Topics/FetchData"
+
 
 
 function App() {
@@ -35,6 +37,7 @@ function App() {
             <Route exact path="/user-registration-form" element={<UserRegistrationForm />} />
             <Route exact path="/custom-component" element={<CustomComponent />} />
             <Route exact path="/to-do-list" element={<ToDoList/>} />
+            <Route exact path="/fetch-data" element={<FetchData />} />
           </Routes>
           </div>
         </Router>
